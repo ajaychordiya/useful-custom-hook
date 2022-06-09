@@ -5,7 +5,7 @@ const useFetch = (url) => {
   useEffect(() => {
     setState({ data: null, loading: true });
     fetch(url)
-      .then((data) => data.text())
+      .then((data) => data.json())
       .then((x) => {
         // console.log(x);
         setState({ data: x, loading: false });
